@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ profile.name }}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div>
+        <p>{{ object.login }}</p>
+        <p>{{ object.age }}</p>
+        <p>{{ object.gender }}</p>
+        <p>{{ object.bio }}</p>
+        <img class="post-image" src="{{ object.image.url }}" alt="">
+        <p>{{ object.created_date }}</p>
+    </div>
+</body>
+</html>

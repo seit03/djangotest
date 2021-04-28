@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div>
+    <ul>
+        {% for i in object_list %}
+        <li class="comment">
+            <p>{{ i.title }}</p>
+            <p>{{ i.text }}</p>
+            <p>{{ i.created_date }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
